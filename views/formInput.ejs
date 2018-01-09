@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include head.ejs %>
+</head>
+
+<body>
+  <header>
+    <% include header.ejs %>
+  </header>
+  <main>
+    <div class="jumbotron">
+      <form name="form1" method="POST" action="/api/postSensor">
+    <table>
+        <tr>
+        <td>TeamID</td>
+        <td><input type="text" name="id" ></td>
+        </tr>
+        <tr>
+        <td>LAT</td>
+        <td><input type="text" name="lat" ></td>
+        </tr>
+        tr>
+        <td>Long</td>
+        <td><input type="text" name="long" ></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Save" ></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+  </main>
+  <footer>
+    <% include footer.ejs %>
+  </footer>
+</body>
+
+</html>
