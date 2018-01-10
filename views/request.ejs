@@ -12,19 +12,26 @@
   <main>
     <div class="jumbotron">
       <table>
-        <% for(var i=0; i < data.length; i++) { %>
-          <tr>
-            <td>
-              <%= data[i].id %>
-            </td>
-            <td>
-              <%= data[i].name %>
-            </td>
-            <td>
-              <%= data[i].username %>
-            </td>
-          </tr>
+        <% for(var i=0; i < data.sensors.length; i++) { %>
+<td>
+  <%= data.sensors[i].sensName %>
+</td>
+          <% for(var j=0; j < data.sensors[i].data.length; j++) { %>
+            <tr>
+
+              <td>
+                <%= data.sensors[i].data[j].sensID %>
+              </td>
+              <td>
+                <%= data.sensors[i].data[j].val %>
+              </td>
+              <td>
+                <%= data.sensors[i].data[j].date %>
+              </td>
+            </tr>
+          <% } %>
         <% } %>
+
       </table>
     </div>
   </main>

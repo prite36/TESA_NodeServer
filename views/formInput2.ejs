@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include head.ejs %>
+</head>
+
+<body>
+  <header>
+    <% include header.ejs %>
+  </header>
+  <main>
+    <div class="jumbotron">
+      <form name="form1" method="POST" action="/api/showdatateam">
+    <table>
+        <tr>
+        <td>TeamID</td>
+        <td><input type="text" name="id" ></td>
+        </tr>
+        <tr>
+        <td>Select Sensors</td>
+        <td><select name="typesensor" id="">
+          <option value="pressure">pressure</option>
+          <option value="temperature">temperature</option>
+          <option value="humidity">pressure</option>
+          <option value="gyroscope">gyroscope</option>
+          <option value="accelerometer">accelerometer</option>
+          <option value="magnetometer">magnetometer</option>
+          <option value="leds">leds</option>
+          <option value="din1">din1</option>
+
+        </select></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Save" ></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+  </main>
+  <footer>
+    <% include footer.ejs %>
+  </footer>
+</body>
+
+</html>

@@ -60,13 +60,24 @@ router.get('/:table/:teamID/:N', function(req, res){
 //         else res.send('success');
 //     });
 // });
-router.post('/postSensor', function(req, res){
+router.get('/insertdatateam', function(req, res) {
+  res.render('formInput2', {
+    data: req.body
+  })
+});
+router.post('/showdatateam', function(req, res) {
+  console.log(req.body)
+  res.render('showdatateam', {
+    data: req.body
+  })
+});
+router.post('/addlocation', function(req, res){
   console.log(req.body)
   res.render('showInput', {
     data: req.body
   })
 });
-router.get('/sensor', function(req, res){
+router.get('/insertlocation', function(req, res) {
   res.render('formInput', {
     data: req.body
   })
